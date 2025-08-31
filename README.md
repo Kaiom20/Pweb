@@ -1,14 +1,14 @@
-# Programação Web
+# Programação Web 💻
 Este repositório centraliza todas as "receitas" (atividades práticas) desenvolvidas para a matéria de Programação Web (PWeb), do curso de Sistemas de Informação.
 
 O objetivo é documentar e apresentar o progresso e o aprendizado obtidos ao longo da disciplina, com cada atividade sendo desenvolvida em um ambiente isolado e organizado.
 
-🏗️ Estrutura do Repositório
+## Estrutura do Repositório
 Este repositório foi organizado de uma maneira específica para facilitar a navegação e a correção das atividades:
 
-Branch main: Esta é a branch principal. Ela não contém o código de nenhuma atividade específica, servindo apenas como uma página de entrada e um índice para todas as "receitas" desenvolvidas.
-Branches de Receitas (receitaXX): Cada atividade prática é desenvolvida em sua própria branch. O nome da branch segue um padrão como receita01, receita02, etc., para indicar a qual atividade o código se refere.
-📚 Receitas (Atividades)
+* Branch main: Esta é a branch principal. Ela não contém o código de nenhuma atividade específica, servindo apenas como uma página de entrada e um índice para todas as "receitas" desenvolvidas.
+* Branches de Receitas (receitaXX): Cada atividade prática é desenvolvida em sua própria branch. O nome da branch segue um padrão como receita01, receita02, etc., para indicar a qual atividade o código se refere.
+## Receitas (Atividades)
 Abaixo está a lista de todas as receitas desenvolvidas. Para visualizar o código e a demonstração de cada uma, basta acessar a respectiva branch.
 
 * [Receita 01: html básico do básico do básico] - branch: receita01
