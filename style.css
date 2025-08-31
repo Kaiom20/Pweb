@@ -6,12 +6,16 @@ p.mote{
     color:red
 }
 
-a.interacao:link{color:green;}
+a.interacao:link{color:black;}
 a.interacao:visited{color:blue;}
-a.interacao:hover{color:yellow;}
-a.interacao:active{color:black;}
+a.interacao:hover{color:red;}
+a.interacao:active{color:greenyellow;}
 
 
-
+img.redonda{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
 
 
