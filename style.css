@@ -5,3 +5,13 @@ p.verso{
 p.mote{
     color:red
 }
+
+a.interacao:link{color:green;}
+a.interacao:visited{color:blue;}
+a.interacao:hover{color:yellow;}
+a.interacao:active{color:black;}
+
+
+
+
+
