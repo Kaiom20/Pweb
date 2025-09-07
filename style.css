@@ -1,0 +1,28 @@
+#divCerveja {
+    transition: opacity 0.5s ease-in-out;
+    min-height: 60px;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+#divBotao {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+

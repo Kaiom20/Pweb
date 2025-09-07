@@ -4,6 +4,7 @@
 
    <head>
       <meta charset="UTF-8">      
+      <link href="style.css" rel="stylesheet">
    </head>
 
    <body>
@@ -12,8 +13,8 @@
          <button id="botaoCarregar">Mostrar/Apagar Cerveja</button>
       </div>            
 
-      <div id="divCerveja">
-
+      <div id="divCerveja" class="fade-out">
+         
       </div>
    </body>   
    
@@ -24,14 +25,23 @@
          let div = document.getElementById("divCerveja");
 
          if (!nomeVisivel) {
-            divCerveja.innerHTML = div.innerHTML = `<h1>Guinness</h1>`;
+            divCerveja.innerHTML = `<h1>Guinness</h1>`;
+            divCerveja.classList.remove('fade-out');
+            divCerveja.classList.add('fade-in');
             nomeVisivel = true;            
          }
          else {
-            divCerveja.innerHTML = " ";
-            nomeVisivel = false
-         } 
+            divCerveja.classList.remove('fade-in');
+            divCerveja.classList.add('fade-out');
 
+            setTimeout(() => {
+               if (!nomeVisivel) {
+                  divCerveja.innerHTML = '';
+               }
+            }, 500);
+
+            nomeVisivel = false;
+         } 
       }
 
       let botao = document.getElementById("botaoCarregar")
