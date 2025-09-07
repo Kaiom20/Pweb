@@ -7,19 +7,35 @@
    </head>
 
    <body>
-      <div id="divBotao"><button id="botaoCarregar">Carregando cervejas...</button></div>            
+      
+      <div id="divBotao">
+         <button id="botaoCarregar">Mostrar/Apagar Cerveja</button>
+      </div>            
 
-      <div id="nomeCerveja"></div>
+      <div id="divCerveja">
+
+      </div>
    </body>   
    
    <script>
-      function carregarDiv() {
-         let div = document.getElementById("nomeCerveja")
-         div.innerHTML = `<h1>Guinness</h1>`            
+      let nomeVisivel = false;
+      
+      function toggleCerveja() {
+         let div = document.getElementById("divCerveja");
+
+         if (!nomeVisivel) {
+            divCerveja.innerHTML = div.innerHTML = `<h1>Guinness</h1>`;
+            nomeVisivel = true;            
+         }
+         else {
+            divCerveja.innerHTML = " ";
+            nomeVisivel = false
+         } 
+
       }
 
       let botao = document.getElementById("botaoCarregar")
-      botao.addEventListener("click", carregarDiv)
+      botao.addEventListener("click", toggleCerveja)
    </script>
 
 </html>
