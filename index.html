@@ -25,32 +25,51 @@
 
   <body>
     <div class="estilizado" id="meu amor">
-      <button id="botaoCarregar">Carregando cervejas...</button>
+      <button id="botaoCarregar">Carregando cervejas...</button><br />
+      <button id="botaoOrdenado">Mostrar cervejas ordenadas (ordem alfabética)</button>
     </div>
+
+    <script>
+      let cervejas = ["Guiness", "Desperados", "Becks"];
+
+      function transformar(item) {
+        return `<tr><td>${item}</td></tr>`;
+      }
+
+      function carregarDiv() {
+        let div = document.getElementById("meu amor");
+
+        let cervejasHtml = cervejas.map(transformar);
+
+        div.innerHTML = `
+          <table>
+            <tr><th>Cervejas</th></tr>
+            ${cervejasHtml.join("")}
+          </table>
+        `;
+      }
+
+      function carregarCervejasOrdenadas() {
+        let div = document.getElementById("meu amor");
+
+        // Ordena o array cervejas
+        cervejas.sort();
+
+        let cervejasHtml = cervejas.map(transformar);
+
+        div.innerHTML = `
+          <table>
+            <tr><th>Cervejas Ordenadas (ordem alfabética)</th></tr>
+            ${cervejasHtml.join("")}
+          </table>
+        `;
+      }
+
+      let botao = document.getElementById("botaoCarregar");
+      let botaoOrdenado = document.getElementById("botaoOrdenado");
+
+      botao.addEventListener("click", carregarDiv);
+      botaoOrdenado.addEventListener("click", carregarCervejasOrdenadas);
+    </script>
   </body>
-
-  <script>
-    let cervejas = ["Guiness", "Desperados", "Becks"];
-
-    function transformar(item) {
-      return `<tr><td>${item}</td></tr>`;
-    }
-
-    function carregarDiv() {
-      let div = document.getElementById("meu amor");
-
-      let cervejasHtml = cervejas.map(transformar);
-
-      div.innerHTML = `
-        <table>
-          <tr><th>Cervejas</th></tr>
-          ${cervejasHtml.join("")}
-        </table>
-      `;
-    }
-
-    let botao = document.getElementById("botaoCarregar");
-
-    botao.addEventListener("click", carregarDiv);
-  </script>
 </html>
