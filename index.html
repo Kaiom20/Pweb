@@ -2,8 +2,25 @@
 
 <html>
   <head>
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
     <meta charset="UTF-8" />
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
   </head>
 
   <body>
@@ -16,17 +33,20 @@
     let cervejas = ["Guiness", "Desperados", "Becks"];
 
     function transformar(item) {
-      return `<div>${item}</div>`;
+      return `<tr><td>${item}</td></tr>`;
     }
 
     function carregarDiv() {
       let div = document.getElementById("meu amor");
 
-      //let cervejasHtml = [`<h1>${cervejas[0]}</h1>`,`<h1>${cervejas[1]}</h1>`, `<h1>${cervejas[2]}</h1>`]
-
       let cervejasHtml = cervejas.map(transformar);
 
-      div.innerHTML = `${cervejasHtml.join("\n")}`;
+      div.innerHTML = `
+        <table>
+          <tr><th>Cervejas</th></tr>
+          ${cervejasHtml.join("")}
+        </table>
+      `;
     }
 
     let botao = document.getElementById("botaoCarregar");
