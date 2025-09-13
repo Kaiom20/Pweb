@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
     <meta charset="UTF-8" />
   </head>
 
@@ -18,42 +18,46 @@
         name: "Guiness",
         alcohol: "10%",
         style: "Imperial Stout",
-        ibu: "45"
+        ibu: "45",
       },
       {
         name: "Desperados",
         alcohol: "6%",
         style: "Lager",
-        ibu: "25"
+        ibu: "25",
       },
       {
         name: "Becks",
         alcohol: "5%",
         style: "Pilsen",
-        ibu: "20"
+        ibu: "20",
       },
     ];
 
-    const carregarDiv = (cs, elementId = "cervejasDiv") => {
+    const carregarDiv = (
+      cs,
+      elementId = "cervejasDiv",
+      headers = ["Nome", "Álcool", "Estilo", "Amargor"]
+    ) => {
       const div = document.getElementById(elementId);
+
+      // Obter as chaves dos objetos para mapear as propriedades
+      const keys = Object.keys(cs[0] || {});
 
       const linhasHtml = cs.map(
         (item) => `<tr>
-          <td>${item.name}</td>
-          <td>${item.alcohol}</td>
-          <td>${item.style}</td>
-          <td>${item.ibu}</td>
+          ${keys.map((key) => `<td>${item[key]}</td>`).join("")}
         </tr>`
       );
+
+      // Criar cabeçalhos da tabela
+      const headerHtml = headers.map((header) => `<th>${header}</th>`).join("");
 
       div.innerHTML = `
         <table class="customTable">
           <thead>
             <tr>
-              <th>Nome</th>
-              <th>Álcool</th>
-              <th>Estilo</th>
-              <th>IBU</th>
+              ${headerHtml}
             </tr>
           </thead>
           <tbody>
