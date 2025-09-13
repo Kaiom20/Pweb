@@ -22,9 +22,15 @@
   </head>
   <body>
     <div class="estilizado" id="meu amor">
-      <button id="botaoCarregar">Carregando whiskies...</button><br />
-      <button id="botaoOrdenado">Mostrar whiskies ordenados</button><br />
-      <button id="botaoEmbaralhar">Embaralhar whiskies</button>
+      <a href="#" onclick="carregarDiv(); return false;"
+        >Carregando whiskies...</a
+      ><br />
+      <a href="#" onclick="carregarWhiskiesOrdenados(); return false;"
+        >Mostrar whiskies ordenados</a
+      ><br />
+      <a href="#" onclick="embaralharWhiskies(); return false;"
+        >Embaralhar whiskies</a
+      >
     </div>
     <script>
       let whiskies = [
@@ -76,14 +82,6 @@
           </table>
         `;
       };
-
-      let botao = document.getElementById("botaoCarregar");
-      let botaoOrdenado = document.getElementById("botaoOrdenado");
-      let botaoEmbaralhar = document.getElementById("botaoEmbaralhar");
-
-      botao.addEventListener("click", carregarDiv);
-      botaoOrdenado.addEventListener("click", carregarWhiskiesOrdenados);
-      botaoEmbaralhar.addEventListener("click", embaralharWhiskies);
     </script>
   </body>
 </html>
